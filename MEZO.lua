@@ -2881,7 +2881,6 @@ local File = json:decode(https.request('https://api.telegram.org/bot'..Token..'/
 local download_ = download('https://api.telegram.org/file/bot'..Token..'/'..File.result.file_path,''..Name_File) 
 local Get_Info = io.open(download_,"r"):read('*a')
 local Gjson = JSON.decode(Get_Info)
-local Dev = Gjson.Dev
 local DevS = Gjson.DevS
 for k,v in pairs(Dev) do 
 if not Redis:sismember(MEZO.."Dev:Groups",v) then
