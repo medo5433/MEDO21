@@ -3021,6 +3021,7 @@ Redis:sadd(MEZO.."ChekBotAdd",msg_chat_id)
 local list = Redis:smembers(MEZO.."ChekBotAdd")
 send(Sudo_Id,0,"*ᥫ᭡ تم تفعيل جروب تلقائيا عن طريق البوت*\nᥫ᭡ اصبح عدد جروباتك *"..#list.."* مجموعه","md",true)
 end
+if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(MEZO.."ChekBotAdd",msg_chat_id) then
 if text == 'ايدي' or text == 'كشف' or text == 'الرتبه' then
 if msg.reply_to_message_id ~= 0 then
 local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
@@ -11986,111 +11987,6 @@ keyboard.inline_keyboard = {
 local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if (text == 'مهنتي' or text == 'المهنه' or text == 'المهنة') and not Redis:get(MEZO.."shakse"..msg_chat_id) then
-local texting = {"نقاش", 
-"دكتور  ",
-"دكتوره  ", 
-"طيار ", 
-"طياره  ", 
-"مدرس ", 
-"مدير  ", 
-"مديره  ", 
-"محاسب ", 
-"محسابه  ", 
-"نقاشه  ", 
-"مدير بنك  ",
-"مديرة بنك  ",
-"وزير  ",
-"وزيره  ",
-"ظابط ",
-"ظابطه  ",
-"شيخه  ",
-"شيخ  ",
-} 
-zezee = texting[math.random(#texting)]
-local Jabwa = bot.getUser(msg.sender_id.user_id)
-local TotalMsgT = Total_message(TotalMsg) 
-local age = "انسان"
-local Noun = "عايش بقالك زمان"
-local photo = bot.getUserProfilePhotos(msg.sender_id.user_id)
-local profession1 = '🎀 اسمك -> '..age
-local profession2 = '✨ سنك -> '..Noun
-local profession3 = '♥ مهنتك -> '..zezee
-local profession4 = '❇️ حالتك -> '..zezee
-local profession5 = '💖 تفاعلك -> '..TotalMsgT
-if photo.total_count > 0 then
-data = {} 
-data.inline_keyboard = {
-{
-{text =profession1,url = "https://t.me/"..Jabwa.username..""}, 
-},
-{
-{text =profession2,url = "https://t.me/"..Jabwa.username..""}, 
-},
-{
-{text =profession3,url = "https://t.me/"..Jabwa.username..""}, 
-},
-{
-{text =profession4,url = "https://t.me/"..Jabwa.username..""}, 
-},
-{
-{text =profession5,url = "https://t.me/"..Jabwa.username..""}, 
-},
-}
-local msgg = msg.id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&photo=".. URL.escape(profession1).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
-if text == "تفعيل شخصيه" or text == "تفعيل شخصيتي" then
-if not msg.Admin then
-send(msg_chat_id,msg_id,'\n* ♡ هذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
-end
-Redis:del(MEZO.."shakse"..msg_chat_id)
-send(msg_chat_id,msg_id,'\n* ♡ تم تفعيل امر شخصيتي * ',"md",true)  
-end
-if text == "تعطيل شخصيتي" or text == "تعطيل شخصيه" then
-if not msg.Admin then
-send(msg_chat_id,msg_id,'\n* ♡ هذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
-end
-Redis:set(MEZO.."shakse"..msg_chat_id,"off")
-send(msg_chat_id,msg_id,'\n* ♡ تم تعطيل امر شخصيتي * ',"md",true)  
-end
-
-
-if (text == 'شخصيتي' or text == 'حدد شخصيتي' or text == 'حددي شخصيتي') and not Redis:get(MEZO.."shakse"..msg_chat_id) then
-local texting = {"عنيده", 
-"متردده  ",
-"خبيثة  ", 
-"ايجابية ", 
-"غامضة  ", 
-"ضعيفة ", 
-"كلاسيكية  ", 
-"مسالمة  ", 
-"حماسية ", 
-"قيادية  ", 
-"شكاك  ", 
-"رومنسية  ",
-"محفزة  ",
-"متعاونة  ",
-"اجتماعية  ",
-"عصبية ",
-"نرجسية  ",
-"انطوائية  ",
-"مظلومة  ",
-} 
-zezee = texting[math.random(#texting)]
-local barlo = bot.getUser(msg.sender_id.user_id)
-local photo = bot.getUserProfilePhotos(msg.sender_id.user_id)
-local news = '✅ شخصيتك -> '..zezee
-if photo.total_count > 0 then
-data = {} 
-data.inline_keyboard = {
-{
-{text =news,url = "https://t.me/"..barlo.username..""}, 
-},
-}
-local msgg = msg.id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&photo=".. URL.escape(news).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
 if text == "تفعيل صورتي" or text == "تفعيل الصوره" then
 if not msg.Admin then
 send(msg_chat_id,msg_id,'\n*ᥫ᭡ هذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
@@ -18359,7 +18255,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝟏 » { 👊 }', data = '/Mahibes1'}, {text = '𝟐 » { 👊 }', data = '/Mahibes2'}, 
+{text = '𝟏 » { ?? }', data = '/Mahibes1'}, {text = '𝟐 » { 👊 }', data = '/Mahibes2'}, 
 },
 {
 {text = '𝟑 » { 👊 }', data = '/Mahibes3'}, {text = '𝟒 » { 👊 }', data = '/Mahibes4'}, 
