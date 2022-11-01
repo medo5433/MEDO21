@@ -3021,7 +3021,6 @@ Redis:sadd(MEZO.."ChekBotAdd",msg_chat_id)
 local list = Redis:smembers(MEZO.."ChekBotAdd")
 send(Sudo_Id,0,"*ᥫ᭡ تم تفعيل جروب تلقائيا عن طريق البوت*\nᥫ᭡ اصبح عدد جروباتك *"..#list.."* مجموعه","md",true)
 end
-if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(MEZO.."ChekBotAdd",msg_chat_id) then
 if text == 'ايدي' or text == 'كشف' or text == 'الرتبه' then
 if msg.reply_to_message_id ~= 0 then
 local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
