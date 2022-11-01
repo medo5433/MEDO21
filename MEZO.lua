@@ -14329,36 +14329,6 @@ local texting = {"‏من ترك أمرهُ لله، أعطاه الله فوق 
 return LuaTele.sendText(msg_chat_id,msg_id,texting[math.random(#texting)],'md')
 end
 end
-if text == "التاريخ" then
-local ban = LuaTele.getUser(msg.sender.user_id)
-local photo = LuaTele.getUserProfilePhotos(msg.sender.user_id)
-local news = 'ᥫ᭡ التاريخ -› '..os.date("%Y/%m/%d")
-if photo.total_count > 0 then
-data = {} 
-data.inline_keyboard = {
-{
-{text =news,url = "https://t.me/"..ban.username..""}, 
-},
-}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&photo=".. URL.escape(news).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
-end
-if text == "الساعه" then
-local ban = LuaTele.getUser(msg.sender.user_id)
-local photo = LuaTele.getUserProfilePhotos(msg.sender.user_id)
-local news = 'ᥫ᭡ الساعه الان -› '..os.date("%I:%M%p")
-if photo.total_count > 0 then
-data = {} 
-data.inline_keyboard = {
-{
-{text =news,url = "https://t.me/"..ban.username..""}, 
-},
-}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&photo=".. URL.escape(news).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
-end
 if text == "اذكار" or text == "ذكر" then
 local texting = {"اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ , وَشُكْرِكَ , وَحُسْنِ عِبَادَتِكَ🎈💞", 
 "االلَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ , وَشُكْرِكَ , وَحُسْنِ عِبَادَتِكَ🎈💞 ",
@@ -14554,7 +14524,6 @@ if text == "بتحبو" or text == "بتحب دا" then
 if Redis:get(MEZO.."Status:Games"..msg.chat_id) then
 local texting = {"طبعا دا قلبي ♥🙄"," هحب فيه اي دا😹🙂","تؤ محصلش😹"}
 return LuaTele.sendText(msg_chat_id,msg_id,texting[math.random(#texting)],'md')
-end
 end
 if text == "بتكره دا" then
 if Redis:get(MEZO.."Status:Games"..msg.chat_id) then
