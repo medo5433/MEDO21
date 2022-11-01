@@ -11695,11 +11695,11 @@ Bio = ''
 end
 local photo = LuaTele.getUserProfilePhotos(UserId_Info.id)
 if photo.total_count > 0 then
-local TestText = "  ❲ MEZO 𝖲𝗈𝗎𝗋𝖼𝖾 ❳\nᥫ᭡\n ᥫ᭡︙*ժᥱ᥎ ꪀᥲ️ꪔᥱ* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\nᥫ᭡︙*ժᥱ᥎ ႦᎥ᥆* : [❲ "..Bio.." ❳]"
+local TestText = "  ❲ 𝙏𝙄ٍ𝙂ٍ𝙀ٓ𝙍 ❳\nᥫ᭡\n ᥫ᭡︙*ժᥱ᥎ ꪀᥲ️ꪔᥱ* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\nᥫ᭡︙*ժᥱ᥎ ႦᎥ᥆* : [❲ "..Bio.." ❳]"
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ 𖣂 𝑃 𝐿 𝐴 𝐸 𝑇 𝐴 𝑅 𝑌 𖣂?  ❳', url = "https://t.me/U_U_U_R"}
+{text = '❲ 𖣂ᎢᏆᏀᗴᖇ𖣂?  ❳', url = "https://t.me/TGe_R"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -17146,7 +17146,7 @@ local MSGID = string.gsub(MsgId,'.0','')
 https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/A_l3l/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
 end
 end
-if text == "افتار بنات 🙋🏻‍♀🌁" then 
+if text == "افتار بنات 🙋🏻‍♀??" then 
 Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender_id.user_id)
 if not msg.Asasy then
 Abs = math.random(2,63); 
