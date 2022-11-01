@@ -2849,49 +2849,6 @@ File:write(Get_Json)
 File:close()
 return LuaTele.sendDocument(msg_chat_id,msg_id,'./'..UserBot..'.json', '*ᥫ᭡ تم جلب النسخه الاحتياطيه\nᥫ᭡تحتوي على {'..#Groups..'} جروب \nᥫ᭡وتحتوي على {'..#UsersBot..'} مشترك *\n', 'md')
 end
-if text == 'جلب نسخه المطورين' then
-  if not msg.Asasy then 
-  return send(msg_chat_id,msg_id,'\n*• هذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
-  end
-local Dev = Redis:smembers(MEZO.."Dev:Groups")
-local DevS = Redis:smembers(MEZO.."Devss:Groups")
-local set_Json = '{"BotId": '..MEZO..',\n"Dev":['
-for k,v in pairs(Dev) do
-set_Json = set_Json..tonumber(v)..","
-end
-local set2_Json = set_Json..'],\n"DevS":['
-for k,v in pairs(DevS) do
-set2_Json = set2_Json..tonumber(v)..","
-end
-local File = io.open('./BotDev.json', "w")
-File:write(set2_Json..']\n}')
-File:close()
-bot.sendDocument(msg_chat_id,msg_id,'./BotDev.json', '', 'md')
-end
-
-if text == 'رفع نسخه المطورين' and msg.reply_to_message_id ~= 0 then
-if not msg.Asasy then 
-return send(msg_chat_id,msg_id,'\n*• هذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
-end
-local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
-if Message_Reply.content.document then
-local File_Id = Message_Reply.content.document.document.remote.id
-local Name_File = Message_Reply.content.document.file_name
-local File = json:decode(https.request('https://api.telegram.org/bot'..Token..'/getfile?file_id='..File_Id)) 
-local download_ = download('https://api.telegram.org/file/bot'..Token..'/'..File.result.file_path,''..Name_File) 
-local Get_Info = io.open(download_,"r"):read('*a')
-local Gjson = JSON.decode(Get_Info)
-local DevS = Gjson.DevS
-for k,v in pairs(Dev) do 
-if not Redis:sismember(MEZO.."Dev:Groups",v) then
-Redis:sadd(MEZO.."Dev:Groups",v)
-end
-for k,v in pairs(DevS) do 
-if not Redis:sismember(MEZO.."Devss:Groups",v) then
-Redis:sadd(MEZO.."Devss:Groups",v)
-end
-return send(msg_chat_id,msg_id,'\n*• تم استرجاع قائمه المطورين* ',"md",true) 
-end
 if text and text:match("^تعين عدد الاعضاء (%d+)$") then
 if not msg.ControllerBot then 
 return send(msg_chat_id,msg_id,'\n*ᥫ᭡ هذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
@@ -17192,7 +17149,7 @@ data = {
 {text = 'تنظيف المجموعات ᥫ᭡',type = 'text'},{text = 'تنظيف المشتركين ᥫ᭡', type = 'text'},
 },
 {
-{text = 'جلب النسخه الاحتياطيه ᥫ᭡',type = 'text'},{text = 'جلب نسخه المطورين ᥫ᭡',type = 'text'},
+{text = 'جلب النسخه الاحتياطيه ᥫ᭡',type = 'text'},
 },
 {
 {text = 'اضف رد عام ᥫ᭡',type = 'text'},{text = 'حذف رد عام ᥫ᭡', type = 'text'},
