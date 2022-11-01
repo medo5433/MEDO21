@@ -12041,7 +12041,6 @@ data.inline_keyboard = {
 local msgg = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&photo=".. URL.escape(profession1).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
 end
-end
 if text == "تفعيل شخصيه" or text == "تفعيل شخصيتي" then
 if not msg.Admin then
 send(msg_chat_id,msg_id,'\n* ♡ هذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
@@ -12092,7 +12091,6 @@ data.inline_keyboard = {
 }
 local msgg = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&photo=".. URL.escape(news).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
 end
 if text == "تفعيل صورتي" or text == "تفعيل الصوره" then
 if not msg.Admin then
@@ -14455,7 +14453,6 @@ local texting = {"اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِ�
 "«آلَلَهّمً ردٍنِآ إلَيَکْ ردٍآ جّمًيَلَآ💔🥺",
 } 
 return send(msg_chat_id,msg_id,texting[math.random(#texting)],'md')
-end
 end
 if text == "نكته" or text == "قولي نكته" or text == "عايز اضحك" then 
 if Redis:get(MEZO.."Status:Games"..msg.chat_id) then
