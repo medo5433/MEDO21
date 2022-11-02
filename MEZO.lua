@@ -9607,6 +9607,48 @@ end
 LuaTele.deleteMessages(msg.chat_id,{[1]= msg.reply_to_message_id})
 LuaTele.deleteMessages(msg.chat_id,{[1]= msg_id})
 end
+if text == 'تفاعل المجموعه' and msg.reply_to_message_id == 0 then
+if ChannelJoinch(msg) == false then
+local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(MEZO..'Chat:Channel:Join:Name'..msg.chat_id), url = 't.me/'..Redis:get(MEZO..'Chat:Channel:Join'..msg.chat_id)}, },}}
+return send(msg.chat_id,msg.id,'*\n 𖥔 عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
+end
+if ChannelJoin(msg) == false then
+local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(MEZO..'Channel:Join:Name'), url = 't.me/'..Redis:get(MEZO..'Channel:Join')}, },}}
+return send(msg.chat_id,msg.id,'*\n 𖥔 عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
+end
+local Message = msg.id/2097152/0.5
+local MsgText = ''  
+print(Message)
+if tonumber(Message) < 200 then 
+MsgText = 'سايق مخده 😹' 
+elseif tonumber(Message) < 400 then 
+MsgText = 'الله بالخير 👋'
+elseif tonumber(Message) < 600 then 
+MsgText = 'عفيه اتفاعل 😽' 
+elseif tonumber(Message) < 800 then 
+MsgText = 'بدأ يتحسن 😐' 
+elseif tonumber(Message) < 1000 then 
+MsgText = 'شكد تحجي 😒' 
+elseif tonumber(Message) < 1300 then 
+MsgText = 'استمر بطل 😍' 
+elseif tonumber(Message) < 1600 then 
+MsgText = 'تفاعل غنبله 🙂'  
+elseif tonumber(Message) < 1800 then 
+MsgText = 'استمر يعسل 🥳' 
+elseif tonumber(Message) < 2200 then 
+MsgText = 'جيد جدا ♥️' 
+elseif tonumber(Message) < 2600 then 
+MsgText = 'ممتاز جدا 🥰' 
+elseif tonumber(Message) < 3000 then 
+MsgText = 'مــلــک 💯😻' 
+elseif tonumber(Message) < 3600 then 
+MsgText = 'اسطورة التفاعل❤️' 
+elseif tonumber(Message) < 10000000000 then 
+MsgText = 'ملك التلكرام 💖'  
+end 
+
+return send(msg_chat_id,msg_id," 𖥔 تفاعل المجموعه -> "..MsgText, "md")
+end
 if text == 'تعين الايدي عام' then
 if not msg.ControllerBot then 
 return send(msg_chat_id,msg_id,'\n*⌔ هذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
@@ -12023,7 +12065,7 @@ Redis:del(MEZO.."sayy"..msg_chat_id)
 send(msg_chat_id,msg_id,'\n*⌔ تم تفعيل امر قول * ',"md",true)  
 end
 if text == 'الجروب' or text == 'البار' or text == 'عدد الجروب' or text == 'عدد البار' then
-Info_Chats = bot.getSupergroupFullInfo(msg.chat_id)
+local Info_Chats = LuaTele.getSupergroupFullInfo(msg.chat_id)
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
@@ -13458,7 +13500,6 @@ local T =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '•ᴍʏ ᴅᴇᴠ♪', callback_data="/units"},{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', callback_data="/TGe_R"}},   
-{{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
 {{text = '♪ ✈ • أضف البوت لمجموعتك • ✈ •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
