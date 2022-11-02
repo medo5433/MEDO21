@@ -17091,197 +17091,6 @@ return send(msg_chat_id, msg_id, "🦇Link Group : \n["..Get_Chat.title.. ']('..
 end
 end
 end
-if text == "اغاني قصيرة 🎶" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,140); 
-local Text ='*۩┊تم اختيار المقطع الصوتي لك*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '۩ مطـور البـوت ۩', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "حالات واتس 🎬" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(296,400); 
-local Text ='*🎆┊حـالات واتـس قصيـرة ➧🧸♥️*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '۩ مطـور البـوت ۩', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVideo?chat_id=' .. msg.chat_id .. '&video=https://t.me/RSHDO5/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "انمي ستوري 🎬" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(6,641); 
-local Text ='*🎆┊ستـوريات آنمـي قصيـرة ➧ 🖤🧧*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '۩ مطـور البـوت ۩', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVideo?chat_id=' .. msg.chat_id .. '&video=https://t.me/AA_Zll/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "بصمـات ميمـز 🦹🏻‍♂" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-MEZOy = math.random(2,1201); 
-local  U_Y_3_M = '*۩┊اضغط الـزر لتغييـر مقطـع الميمـز*'
-data = {} 
-data.inline_keyboard = {
-{
-{text = 'ميمـز آخـر 🎙', callback_data= msg.sender.user_id..'/memz'}, 
-},
-}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendVoice?chat_id=" .. msg.chat_id .. "&voice=https://t.me/MemzDavid/"..MEZOy.."&caption=" .. URL.escape( U_Y_3_M).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
-end
-if text == "عـروض الافـلام 🎞" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,82); 
-local Text ='*۩┊تم اختيار الفلم لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/MEZOMoves/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "انمي بنت 👩‍🎤🎑" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(3,825); 
-local Text ='*🎆┊افتـارات آنمـي بنـات ➧🧚🏻‍♀◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/shhdhn/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "انمي ولد 👨‍🎤🎑" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(3,556); 
-local Text ='*🎆┊افتـارات آنمـي ولـد ➧🙇🏻◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/dnndxn/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "صـور 🎇" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(4,1171); 
-local Text ='*۩┊تم اختيار الافتـار لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/PhotosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "معلومات عامة 🧩" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(3,270); 
-local Text ='*۩┊صـورة ومعلومـة 🛤💡*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/A_l3l/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "افتار بنت 🙋🏻‍♀🌁" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,63); 
-local Text ='*🎆┊افتـارات بنـات تمبلـرࢪ ➧🧚🏻‍♀◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/banaaaat1/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "افتار ولد 🙋🏻‍♂🌁" or text == "رمادي ولد 🧝🏻🏙" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,131); 
-local Text ='*🎆┊افتـارات ولـد ࢪمـاديه ➧🙇🏻🖤◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/shababbbbR/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "رمادي بنت 🧝🏻‍♀🏙" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,131); 
-local Text ='*🎆┊افتـارات بنـات ࢪمـاديه ➧🙇🏻‍♀🖤◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/banatttR/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "بيست بنات 👯‍♀🎆" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,30); 
-local Text ='*🎆┊افتـارات بيست تطقيـم بنـات ➧🧚🏻‍♀🧚🏻‍♀◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/Tatkkkkkim/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "تطقيم حب ♥️🎆" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,58); 
-local Text ='*🎆┊افتـارات تطـقيم حـب تمبلـرࢪ ➧??♥️◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/tatkkkkkimh/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "متحـركـات 🎆" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,1075); 
-local Text ='*۩┊تم اختيار متحركه لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "ريمكسات اغـاني 🎵" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,612); 
-local Text ='*۩┊تم اختيار المقطع ريماكس لك 💞🎶*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '۩ مطـور البـوت ۩', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/RemixDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "رقيـة شرعيـة 🕋" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(5,121); 
-local Text ='*۩┊تم اختيار مقطـع الرقيـة الشـرعيـة 🕋🤍*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '۩ مطـور البـوت ۩', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/Rqy_1/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "اشعـار صوتيـة 🎙" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(7,592); 
-local Text ='*۩┊تم اختيار المقطع شعر لك*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '۩ مطـور البـوت ۩', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
 if text == '/start' then
 Redis:sadd(MEZO..'Num:User:Pv',msg.sender.user_id)  
 if not msg.ControllerBot then
@@ -17457,6 +17266,197 @@ data = {
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'* ⦁ اهلا بك عزيزي .. تصفح كيبورد خدمات البوت بالاسفل *', 'md', false, false, false, false, reply_markup)
+end
+end
+if text == "اغاني قصيرة 🎶" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,140); 
+local Text ='*🦇┊تم اختيار المقطع الصوتي لك*'
+keyboard = {}  
+keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+if text == "حالات واتس 🎬" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(296,400); 
+local Text ='*🎆┊حـالات واتـس قصيـرة ➧🧸♥️*'
+keyboard = {}  
+keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVideo?chat_id=' .. msg.chat_id .. '&video=https://t.me/RSHDO5/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+if text == "انمي ستوري 🎬" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(6,641); 
+local Text ='*🎆┊ستـوريات آنمـي قصيـرة ➧ 🖤🧧*'
+keyboard = {}  
+keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVideo?chat_id=' .. msg.chat_id .. '&video=https://t.me/AA_Zll/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+if text == "بصمـات ميمـز 🦹🏻‍♂" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+MEZOy = math.random(2,1201); 
+local  U_Y_3_M = '*🦇┊اضغط الـزر لتغييـر مقطـع الميمـز*'
+data = {} 
+data.inline_keyboard = {
+{
+{text = 'ميمـز آخـر 🎙', callback_data= msg.sender.user_id..'/memz'}, 
+},
+}
+local msgg = msg_id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token.."/sendVoice?chat_id=" .. msg.chat_id .. "&voice=https://t.me/MemzDavid/"..MEZOy.."&caption=" .. URL.escape( U_Y_3_M).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
+end
+end
+if text == "عـروض الافـلام 🎞" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,82); 
+local Text ='*🦇┊تم اختيار الفلم لك*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/MEZOMoves/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "انمي بنت 👩‍🎤🎑" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(3,825); 
+local Text ='*🎆┊افتـارات آنمـي بنـات ➧🧚🏻‍♀◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/shhdhn/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "انمي ولد 👨‍??🎑" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(3,556); 
+local Text ='*🎆┊افتـارات آنمـي ولـد ➧🙇🏻◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/dnndxn/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "صـور 🎇" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(4,1171); 
+local Text ='*🦇┊تم اختيار الافتـار لك*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/PhotosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "معلومات عامة 🧩" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(3,270); 
+local Text ='*🦇┊صـورة ومعلومـة 🛤💡*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/A_l3l/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "افتار بنت 🙋🏻‍♀🌁" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,63); 
+local Text ='*🎆┊افتـارات بنـات تمبلـرࢪ ➧🧚🏻‍♀◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/banaaaat1/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "افتار ولد 🙋🏻‍♂🌁" or text == "رمادي ولد 🧝🏻🏙" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,131); 
+local Text ='*🎆┊افتـارات ولـد ࢪمـاديه ➧🙇🏻🖤◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/shababbbbR/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "رمادي بنت 🧝🏻‍♀🏙" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,131); 
+local Text ='*🎆┊افتـارات بنـات ࢪمـاديه ➧🙇🏻‍♀🖤◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/banatttR/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "بيست بنات 👯‍♀🎆" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,30); 
+local Text ='*🎆┊افتـارات بيست تطقيـم بنـات ➧🧚🏻‍♀🧚🏻‍♀◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/Tatkkkkkim/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "تطقيم حب ♥️🎆" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,58); 
+local Text ='*🎆┊افتـارات تطـقيم حـب تمبلـرࢪ ➧??♥️◟*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/tatkkkkkimh/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "متحـركـات 🎆" then 
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,1075); 
+local Text ='*🦇┊تم اختيار متحركه لك*'
+local MsgId = msg.id/2097152/0.5
+local MSGID = string.gsub(MsgId,'.0','')
+https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+end
+end
+if text == "ريمكسات اغـاني 🎵" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(2,612); 
+local Text ='*🦇┊تم اختيار المقطع ريماكس لك 💞🎶*'
+keyboard = {}  
+keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/RemixDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+if text == "رقيـة شرعيـة 🕋" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(5,121); 
+local Text ='*🦇┊تم اختيار مقطـع الرقيـة الشـرعيـة 🕋🤍*'
+keyboard = {}  
+keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/Rqy_1/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+end
+if text == "اشعـار صوتيـة 🎙" then
+Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
+Abs = math.random(7,592); 
+local Text ='*🦇┊تم اختيار المقطع شعر لك*'
+keyboard = {}  
+keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 end
 if text == "تفعيل البوت بصوره 🦇" then
