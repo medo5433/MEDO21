@@ -11591,7 +11591,76 @@ local msg_id = msg.id/2097152/0.5
 end
 end
 ---زخرفة ----
-
+if text == "زخرفه" then
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+    {
+    {text = '𝙀𝙉𝙂 ▴ زخࢪفھـۃ انجليزي', data = msg.sender.user_id..'/zeng'},
+    },
+    {
+      {text = 'AR ▴ زخࢪفھـۃ عربي', data = msg.sender.user_id..'/zar'},
+      },
+    }
+    }
+  return send(msg_chat_id,msg_id, "مرحبا بك في زخرفه تايجر","md",false,false,false,false,reply_markup)
+end
+-- z eng
+if text and text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zeng" then
+  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
+  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
+  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
+  local zkrf = JSON.decode(api)
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
+      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
+      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
+      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
+      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
+      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
+      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
+      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
+      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
+      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
+      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
+      {{text = zkrf['anubis']['12'] , data = msg.sender.user_id..'/a12'}},
+      {{text = zkrf['anubis']['13'] , data = msg.sender.user_id..'/a13'}},
+      {{text = zkrf['anubis']['14'] , data = msg.sender.user_id..'/a14'}},
+      {{text = zkrf['anubis']['15'] , data = msg.sender.user_id..'/a15'}},
+      {{text = zkrf['anubis']['16'] , data = msg.sender.user_id..'/a16'}},
+      {{text = zkrf['anubis']['17'] , data = msg.sender.user_id..'/a17'}},
+      {{text = zkrf['anubis']['18'] , data = msg.sender.user_id..'/a18'}},
+      {{text = zkrf['anubis']['19'] , data = msg.sender.user_id..'/a19'}},
+    }
+    }
+    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
+end
+-- z ar 
+if text and not text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zar" then
+  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
+  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
+  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
+  local zkrf = JSON.decode(api)
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
+      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
+      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
+      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
+      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
+      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
+      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
+      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
+      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
+      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
+      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
+    }
+    }
+    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
+end
 -----معاني-الاسماء---
 if text and text:match("^معني (.*)$") then
 local TextName = text:match("^معني (.*)$")
@@ -16295,354 +16364,6 @@ return send(msg_chat_id,msg_id,"🦇 اسرع واحد يحل الحزوره ↓
 end
 end
 
-if text == 'اسئله' then   
-if Redis:get(MEZO.."Status:Games"..msg.chat_id) then
-t1 = [[
-ماهو اطول نهر في العالم 
-1- النيل  
-2- الفرات 
-3- نهر الكونغو
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t2 = [[
-ماعدد عظام الوجه؟
-1- 15
-2- 13
-3- 14 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t3 =[[
-كراسي بيضاء وجدران ورديه اذا اغلقته اصبح ظلام  فمن اكون؟
-
-1- الفم 
-2- الاذن
-3- الثلاجه
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t4 =[[
-كم جزء تحتوي مسلسل وادي الذئاب؟
-
-1- 7
-2- 15
-3- 11
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t5 =[[
-كم جزء يحتوي القران الكريم؟
-
-1- 60
-2- 70
-3- 30 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t6 =[[
-من هوه اغنى رئيس في العالم؟
-
-1- ترامب
-2- اوباما
-3- بوتين  
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-
-t7 =[[
-من هوه مؤسس شركه ابل العالميه 
-
-1-لاري بايج 
-2- بيا غايتز
-3- ستيف جوبر
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t8 =[[
-ماهي عاصمه فرنسا؟
-
-1- باريس 
-2- لوين 
-3- موسكو 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t9 =[[
-ماعدد دول العربيه التي توجد في افريقيا 
-
-1- 10 
-2- 17
-3- 9
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t11 =[[
-ماهو الحيوان الذي يحمل 50 فوق وزنه؟
-1-الفيل
-2- النمل  
-3- الثور
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t12 =[[
-ماذا يوجد بيني وبينك؟  
-1- الضل
-2- الاخلاق
-3-حرف الواو  
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t13 =[[
-ماهو الشيء النبات ينبت للانسان بلا بذر؟
-1-الاضافر 
-2- الاسنان
-3- الشعر
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t14 =[[
-م̷ـــِْن هو اول الرسول الى الارض؟
-1- ادم
-2- نوح
-3-ابراهيم 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t15 =[[
-ما هو الشّيء الذي يستطيع المشي بدون أرجل والبكاء بدون أعين؟
-1- سحاب
-2- بئر
-3- نهر
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t16 =[[
-ما الشيء الذي نمتلكه , لكنّ غيرنا يستعمله أكثر منّا؟
-1- العمر
-2- ساعه
-3- الاسم
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t17 =[[
-اصفر اللون سارق عقول اهل الكون وحارمهم لذيذ النوم
-1- نحاس
-2- الماس
-3- ذهب
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t18 =[[
-في الليل ثلاثة لكنه في النهار واحده فما هو
- 1- حرف الباء
- 2- حرف الام 
-3- حرف الراء
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t19 =[[
-على قدر اصل العزم تأتي؟
-1- العزائم 
-2- المكارم
-3- المبائب
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-
-t20 =[[
-ماهي جمع كلمه انسه ؟
-1- سيدات
-2- انسات 
-3- قوانص
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t21 =[[
-اله اتسعلمت قديما في الحروب؟
-1- الصاروخ
-2- المسدس
-3- المنجنيق 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t22 =[[
-تقع لبنان في قاره؟
-1- افريقيا 
-2- اسيا  
-3- امركيا الشماليه
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-
-t23 =[[
-1- ماهو الحيوان الذي يلقب بملك الغابه؟
-1-الفيل
-2- الاسد 
-3- النمر
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t24 =[[
-كم صفرا للمليون ؟
-1- 4 
-2- 3
-3-6
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t25 =[[
-ما اسم صغير الحصان؟
-1- مهر  
-2- جرو
-3- عجل
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t26 =[[
-ما الحيوان الذي ينام واحدى عينه مفتوحه؟
-
-1- القرش
-2- الدلفين 
-3- الثعلب
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t27 =[[
-ماهي القاره التي تلقب بالقاره العجوز؟
-
-1- امريكا الشماليه 
-2- امريكا الجنوبيه
-3- افريقيا 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t28 =[[
-ما اسم المعدن الموجود فيي الحاله السائله 
-
-1- النحاس 
-2- الحديد
-3- الزئبق 
- 
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t29 =[[
-ماهي عاصمه انجلترا؟
-1- لندن  
-2- لفرسول
-3- تركيا
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t30 =[[
-ماهو الشئ الذي برأسه سبع فتحات
-
-1- الهاتف
-2- التلفاز
-3- الانسان 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t31 =[[
-ماهي عاصمه اليابان ؟
-1- بانقول
-2- نيو دلهي
-3- طوكيو 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-t32 =[[
-من هي زوجه الرسول الاكبر منه سنآ؟
-
-1- حفضه
-2- زينب 
-3- خديجه 
-
- ᥫ᭡ ارسل  الجواب الصحيح فقط
-]]
-mahmoud = {t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32,t1,t2,t3,t4,t5,t6,t7,t8,t9,t11,t12,t13,t14,t15}
-local SENDTEXT = mahmoud[math.random(#mahmoud)]
-if SENDTEXT:find('النيل') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'النيل') 
-elseif SENDTEXT:find('14') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'14') 
-elseif SENDTEXT:find('الفم') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الفم') 
-elseif SENDTEXT:find('11') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'11') 
-elseif SENDTEXT:find('30') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'30') 
-elseif SENDTEXT:find('بوتين') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'بوتين') 
-elseif SENDTEXT:find('ستيف جوبر') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'ستيف جوبر') 
-elseif SENDTEXT:find('باريس') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'باريس') 
-elseif SENDTEXT:find('10') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'10') 
-elseif SENDTEXT:find('النمل') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'النمل') 
-elseif SENDTEXT:find('حرف الواو') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'حرف الواو') 
-elseif SENDTEXT:find('الشعر') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الشعر') 
-elseif SENDTEXT:find('ابراهيم') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'ابراهيم') 
-elseif SENDTEXT:find('سحاب') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'سحاب') 
-elseif SENDTEXT:find('الاسم') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الاسم') 
-elseif SENDTEXT:find('ذهب') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'ذهب') 
-elseif SENDTEXT:find('حرف الام') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'حرف الام') 
-elseif SENDTEXT:find('العزائم') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'العزائم') 
-elseif SENDTEXT:find('انسات') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'انسات') 
-elseif SENDTEXT:find('المنجنيق') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'المنجنيق') 
-elseif SENDTEXT:find('اسيا') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'اسيا') 
-elseif SENDTEXT:find('الاسد') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الاسد') 
-elseif SENDTEXT:find('6') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'6') 
-elseif SENDTEXT:find('مهر') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'مهر') 
-elseif SENDTEXT:find('الدلفين') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الدلفين') 
-elseif SENDTEXT:find('اوروبا') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'اوروبا') 
-elseif SENDTEXT:find('الزئبق') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الزئبق') 
-elseif SENDTEXT:find('لندن') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'لندن') 
-elseif SENDTEXT:find('الانسان') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'الانسان') 
-elseif SENDTEXT:find('طوكيو') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'طوكيو') 
-elseif SENDTEXT:find('خديجه') then
-Redis:set(MEZO.."GAME:CHER"..msg.chat_id,'خديجه') 
-end
-send(msg.chat_id,msg.id,SENDTEXT)     
-return false  
-end
-end
-if Redis:get(MEZO.."GAME:CHER"..msg.chat_id) and (text == Redis:get(MEZO.."GAME:CHER"..msg.chat_id)) then  
-if text then
-send(msg.chat_id,msg.id,'* ᥫ᭡ احسنت اجابتك صحيحه ꪤ*',"md")     
-Redis:incrby(MEZO.."Num:Add:Games"..msg.chat_id..msg.sender_id.user_id, 1)  
-Redis:del(MEZO.."GAME:CHER"..msg.chat_id)
-elseif text == 'الفيل' or text == 'الثور' or text == 'الحصان' or text == '7' or text == '9' or text == '8' or text == 'لوين' or text == 'موسكو' or text == 'مانكو' or text == '20' or text == '30' or text == '28' or text == 'ترامب' or text == 'اوباما' or text == 'كيم جونغ' or text == '50' or text == '70' or text == '40' or text == '7' or text == '3' or text == '10' or text == '4' or text == 'الاذن' or text == 'الثلاجه' or text == 'الغرفه' or text == '15' or text == '17' or text == '25' or text == 'الفرات' or text == 'نهر الكونغو' or text == 'المسيبي' or text == 'بيا بايج' or text == 'لاري بيج' or text == 'بيا مارك زوكيربرج' or text == 'الفيل' or text == 'النمر' or text == 'الفهد' or text == 'بانقول' or text == 'نيو دلهي' or text == 'بيكن' or text == 'الهاتف' or text == 'التلفاز' or text == 'المذياع' or text == 'لفرسول' or text == 'تركيا' or text == 'بغداد' or text == 'النحاس' or text == 'الحديد' or text == 'الفضه' or text == 'امريكا الشماليه' or text == 'امريكا الجنوبيه' or text == 'افريقيا' or text == 'القرش' or text == 'الثعلب' or text == 'الكلب' or text == 'للجرو' or text == 'العجل' or text == 'الحمار' or text == '3' or text == '5' or text == '6' or text == 'اوربا' or text == 'افريقيا' or text == 'امريكا الجنوبيه' or text == 'افريقيا' or text == 'امريكا الشماليه' or text == 'اوربا' or text == 'الصاروخ' or text == 'المسدس' or text == 'الطائرات' or text == 'سيدات' or text == 'قوانص' or text == 'عوانس' or text == 'المكارم' or text == 'المبائم' or text == 'المعازم' or text == 'حرف الغاء' or text == 'حرف الواو' or text == 'حرف النون' or text == 'نحاس' or text == 'الماس' or text == 'حديد' or text == 'العمر' or text == 'ساعه' or text == 'الحذاء' or text == 'بئر' or text == 'نهر' or text == 'شلال' or text == 'ادم' or text == 'نوح' or text == 'عيسئ' or text == 'الاضافر' or text == 'الاسنان' or text == 'الدموع' or text == 'الاخلاق' or text == 'الضل' or text == 'حرف النون'  then
-local list = {'10' , 'براسي' , 'النمل' , '32' , 'بوتين' , '30' , '11' , 'الفم' , '14' , 'النيل' , 'ستيف جوبر' , 'خديجه' , 'الاسد' , 'طوكيو' , 'الانسان' , 'لندن' , 'الزئبق' , 'اورباالدولفين' , 'المهر' , '4' , 'اسيا' , 'اسيا' , 'المنجنيق' , 'انسات' , 'العزائم' , 'حرف الام' , 'ذهب' , 'الاسم' , 'سحاب' , 'ابراهيم' , 'الشعر' , 'حرف الواو'}
-for k, v in pairs(list) do 
-if text ~= v then
-Redis:del(MEZO.."GAME:CHER"..msg.chat_id)
-send(msg.chat_id,msg.id,' ᥫ᭡ اجابتك خاطئه للاسف ,')     
-return false  
-end
-end
 
 if text == "اعلام" or text == "اعلام ودول" or text == "اعلام و دول" or text == "دول" then
 if Redis:get(MEZO.."Status:Games"..msg.chat_id) then
