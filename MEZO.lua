@@ -11592,33 +11592,75 @@ local msg_id = msg.id/2097152/0.5
 end
 end
 ---زخرفة ----
-if text == "زخرفه" or text == "زخرف"  then
-if msg.can_be_deleted_for_all_users == false then
-return LuaTele.sendText(msg_chat_id,msg_id,"\n*ᥫ᭡ عذرآ البوت ليس ادمن في الجروب يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
+if text == "زخرفه" then
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+    {
+    {text = '𝙀𝙉𝙂 ▴ زخࢪفھـۃ انجليزي', data = msg.sender.user_id..'/zeng'},
+    },
+    {
+      {text = 'AR ▴ زخࢪفھـۃ عربي', data = msg.sender.user_id..'/zar'},
+      },
+    }
+    }
+  return send(msg_chat_id,msg_id, "مرحبا بك في زخرفه بلاك","md",false,false,false,false,reply_markup)
 end
-local reply_markup = LuaTele.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = '🖌️ زخرفه ',  data ='/leftz@'},
-},
-}
-}
-return LuaTele.sendText(msg.chat_id,msg.id,'*\nاليك القوائم الزخرف  اضفط وزخرف*',"md",false, false, false, false, reply_markup)
+-- z eng
+if text and text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zeng" then
+  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
+  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
+  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
+  local zkrf = JSON.decode(api)
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
+      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
+      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
+      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
+      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
+      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
+      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
+      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
+      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
+      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
+      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
+      {{text = zkrf['anubis']['12'] , data = msg.sender.user_id..'/a12'}},
+      {{text = zkrf['anubis']['13'] , data = msg.sender.user_id..'/a13'}},
+      {{text = zkrf['anubis']['14'] , data = msg.sender.user_id..'/a14'}},
+      {{text = zkrf['anubis']['15'] , data = msg.sender.user_id..'/a15'}},
+      {{text = zkrf['anubis']['16'] , data = msg.sender.user_id..'/a16'}},
+      {{text = zkrf['anubis']['17'] , data = msg.sender.user_id..'/a17'}},
+      {{text = zkrf['anubis']['18'] , data = msg.sender.user_id..'/a18'}},
+      {{text = zkrf['anubis']['19'] , data = msg.sender.user_id..'/a19'}},
+    }
+    }
+    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
 end
-
----برج---
-if Redis:get(MEZO.."zhrfa"..msg.sender.user_id) == "sendzh" then
-zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(text)..'')
-zx = JSON.decode(zh)
-t = "\n ᥫ᭡قائمه الزخرفه \n━━──⊶⛧•َٰ𝙏𝙄ٍ𝙂ٍ𝙀ٓ𝙍•⛧⊷──━━\n"
-i = 0
-for k,v in pairs(zx.ok) do
-i = i + 1
-t = t..i.."- `"..v.."` \n"
-end
-LuaTele.sendText(msg_chat_id,msg_id,t,"md",true) 
-Redis:del(MEZO.."zhrfa"..msg.sender.user_id) 
+-- z ar 
+if text and not text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zar" then
+  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
+  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
+  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
+  local zkrf = JSON.decode(api)
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
+      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
+      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
+      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
+      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
+      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
+      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
+      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
+      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
+      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
+      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
+    }
+    }
+    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
 end
 -----معاني-الاسماء---
 if text and text:match("^معني (.*)$") then
@@ -16191,91 +16233,6 @@ LuaTele.sendText(msg.chat_id,msg.id, "⇜ معندكش حساب بنكي ارس�
 end
 end
 
-if text == 'عقاب' then
-if not Redis:get(MEZO.."Status:Games"..msg.chat_id) then
-return bot.sendText(msg.chat_id,msg.id," 𖥔 الالعاب معطلة من قبل المشرفين","md",true)
-end
-Redis:del(MEZO..'List_Ahkamm'..msg.chat_id)
-Redis:set(MEZO.."raeahkamm"..msg.chat_id,msg.sender_id.user_id)
-Redis:sadd(MEZO..'List_Ahkamm'..msg.chat_id,msg.sender_id.user_id)
-Redis:setex(MEZO.."Start_Ahkamm"..msg.chat_id,3600,true)
-return bot.sendText(msg.chat_id,msg.id,"⇜ بدينا لعبة عقاب واضفت اسمك\n⇜ اللي يبي يلعب يرسل كلمة ( انا )","md",true)
-end
-if text == 'نعم' and Redis:get(MEZO.."Witting_StartGamehh"..msg.chat_id) then
-rarahkam = Redis:get(MEZO.."raeahkamm"..msg.chat_id)
-if tonumber(rarahkam) == msg.sender_id.user_id then
-local list = Redis:smembers(MEZO..'List_Ahkamm'..msg.chat_id) 
-if #list == 1 then 
-return bot.sendText(msg.chat_id,msg.id,"𖥔 عذراً لم يشارك اي لاعب","md",true)
-end 
-local UserName = list[math.random(#list)]
-
-local UserId_Info = bot.getUser(UserName)
-if UserId_Info.username and UserId_Info.username ~= "" then
-ls = '@['..UserId_Info.username..']'
-else
-ls = '['..UserId_Info.first_name..'](tg://user?id='..UserName..')'
-end
-Redis:incrby(MEZO..'Num:Add:Games'..msg.chat_id..UserId_Info.id,5)
-Redis:del(MEZO..'raeahkamm'..msg.chat_id) 
-Redis:del(MEZO..'List_Ahkamm'..msg.chat_id) 
-Redis:del(MEZO.."Witting_StartGamehh"..msg.chat_id)
-Redis:del(MEZO.."Start_Ahkamm"..msg.chat_id)
-katu = {
-"**صورة وجهك او رجلك او خشمك او يدك**.",
-"**اصدر اي صوت يطلبه منك الاعبين**.",
-"**سكر خشمك و قول كلمة من اختيار الاعبين الي معك**.",
-"**روح الى اي قروب عندك في الواتس اب و اكتب اي شيء يطلبه منك الاعبينالحد الاقصى 3 رسائل**.",
-"**قول نكتة ولازم احد الاعبين يضحك اذا ضحك يعطونك ميوت الى ان يجي دورك مرة ثانية**.",
-"**سمعنا صوتك و غن اي اغنية من اختيار الاعبين الي معك**.",
-"**ذي المرة لك لا تعيدها**.",
-"**ارمي جوالك على الارض بقوة و اذا انكسر صور الجوال و ارسله في الشات العام**.",
-"**صور اي شيء يطلبه منك الاعبين**.",
-"**اتصل على ابوك و قول له انك رحت مع بنت و احين هي حامل....**.",
-"**سكر خشمك و قول كلمة من اختيار الاعبين الي معك**.",
-"**اعطي اي احد جنبك كف اذا مافيه احد جنبك اعطي نفسك و نبي نسمع صوته**.",
-"**ارمي جوالك على الارض بقوة و اذا انكسر صور الجوال و ارسله في الشات العام**.",
-"**روح عند اي احد بالخاص و قول له انك تحبه و الخ**.",
-"**اكتب في الشات اي شيء يطلبه منك الاعبين في الخاص**.",
-"**قول نكتة اذا و لازم احد الاعبين يضحك اذا محد ضحك يعطونك ميوت الى ان يجي دورك مرة ثانية**.",
-"**سامحتك خلاص مافيه عقاب لك **.",
-"**اتصل على احد من اخوياكخوياتك , و اطلب منهم مبلغ على اساس انك صدمت بسيارتك**.",
-"**غير اسمك الى اسم من اختيار الاعبين الي معك**.",
-"**اتصل على امك و قول لها انك تحبها **.",
-"**لا يوجد سؤال لك سامحتك **.",
-"**قل لواحد ماتعرفه عطني كف**.",
-"**منشن الجميع وقل انا اكرهكم**.",
-"**اتصل لاخوك و قول له انك سويت حادث و الخ....**.",
-"**روح المطبخ و اكسر صحن **.",
-"**اعطي اي احد جنبك كف اذا مافيه احد جنبك اعطي نفسك و نبي نسمع صوت الكف**.",
-"**قول لاي بنت موجود في الروم كلمة حلوه**.",
-"**تكلم باللغة الانجليزية الين يجي دورك مرة ثانية لازم تتكلم اذا ما تكلمت تنفذ عقاب ثاني**.",
-"**لا تتكلم ولا كلمة الين يجي دورك مرة ثانية و اذا تكلمت يجيك باند لمدة يوم كامل من السيرفر**.",
-"**قول قصيدة **.",
-"**تكلم باللهجة السودانية الين يجي دورك مرة ثانية**.",
-"**اتصل على احد من اخوياكخوياتك , و اطلب منهم مبلغ على اساس انك صدمت بسيارتك**.",
-"**اول واحد تشوفه عطه كف**.",
-"**سو مشهد تمثيلي عن اي شيء يطلبه منك الاعبين**.",
-"**سامحتك خلاص مافيه عقاب لك **.",
-"**اتصل على ابوك و قول له انك رحت مع بنت و احين هي حامل....**.",
-"**روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك**.",
-"**تاخذ عقابين**.",
-"**قول اسم امك افتخر بأسم امك**.",
-"**ارمي اي شيء قدامك على اي احد موجود او على نفسك**.",
-"**اذا انت ولد اكسر اغلى او احسن عطور عندك اذا انتي بنت اكسري الروج حقك او الميك اب حقك**.",
-"**اذهب الى واحد ماتعرفه وقل له انا كيوت وابي بوسه**.",
-"**تتصل على الوالدهو تقول لها خطفت شخص**.",
-"** تتصل على الوالدهو تقول لها تزوجت با سر**.",
-"**اتصل على الوالدهو تقول لهااحب وحده**.",
-"**تتصل على شرطي تقول له عندكم مطافي**.",
-"**خلاص سامحتك**.",
-"** تصيح في الشارع انامجنوون**.",
-"** تروح عند شخص وقول له احبك**."
-}
-name = katu[math.random(#katu)]
-return bot.sendText(msg.chat_id,msg.id,'𖥔 تم اختيار '..ls..' لمعاقبته\n𖥔 العقوبة هي ( '..name..' ) ',"md",true)
-end
-end
 if text == "بوب" or text == "مشاهير" then
 if Redis:get(MEZO.."Status:Games"..msg.chat_id) then
 KlamSpeed = {"شوان","سام","ايد شيرين","جاستين","اريانا","سام سميث","ايد","جاستين","معزه","ميسي","صلاح","محمد صلاح","احمد عز","كريستيانو","كريستيانو رونالدو","رامز جلال","امير كراره","ويجز","بابلو","تامر حسني","ابيو","شيرين","نانسي عجرم","محمد رمضان","احمد حلمي","محمد هنيدي","حسن حسني","حماقي","احمد مكي"};
