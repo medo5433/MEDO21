@@ -1333,7 +1333,7 @@ keyboard.inline_keyboard = {
 {text = ' تفعيل ', callback_data = msg.sender.user_id..'/onlinebott'..msg_chat_id},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/TGe_R'},
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/TGe_R'},
 }
 }
 local rep = msg.id/2097152/0.5
@@ -8986,7 +8986,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -12116,7 +12116,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار متحركه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞',url="https://t.me/TGe_R"}},
+{{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞',url="https://t.me/TGe_R"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12126,7 +12126,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞',url="https://t.me/TGe_R"}},
+{{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞',url="https://t.me/TGe_R"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12136,7 +12136,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار الميمز لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞',url="https://t.me/TGe_R"}},
+{{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞',url="https://t.me/TGe_R"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/remixsource/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12147,7 +12147,7 @@ local Text ='*᥀︙تم اختيار ريمكس لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = "https://https://t.me/TGe_R"}
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = "https://https://t.me/TGe_R"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -12159,7 +12159,7 @@ local Text ='*᥀︙تم اختيار الفلم لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = "https://https://t.me/TGe_R"}
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = "https://https://t.me/TGe_R"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -12171,7 +12171,7 @@ local Text ='*᥀︙تم اختيار انمي لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = "https://https://t.me/TGe_R"}
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = "https://https://t.me/TGe_R"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -12182,7 +12182,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞',url="https://t.me/TGe_R"}},
+{{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞',url="https://t.me/TGe_R"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/lDIDIl/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12193,7 +12193,7 @@ local Text ='*᥀︙تم اختيار صور*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = "https://https://t.me/TGe_R"}
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = "https://https://t.me/TGe_R"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -12329,7 +12329,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {{text = 'ترجمه الي العربية', data = msg.sender.user_id..'toar'},{text = 'ترجمه الي الانجليزية', data = msg.sender.user_id..'toen'}},
-{{text = ' ◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = "https://t.me/TGe_R"}},
+{{text = ' ◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = "https://t.me/TGe_R"}},
 }
 }
 return send(msg_chat_id,msg_id, [[*
@@ -13102,7 +13102,7 @@ if text then
 if text:match("^بحث (.*)$") then
 local search = text:match("^بحث (.*)$")
 local json = json:decode(http.request("http://159.223.13.231/oda/yt?tx="..URL.escape(search)..""))
-local datar = {data = {{text = "◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞" , url = 'http://t.me/TGe_R'}}}
+local datar = {data = {{text = "◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞" , url = 'http://t.me/TGe_R'}}}
 for i = 1,10 do
 title = json[i].title
 link = json[i].id
@@ -13493,7 +13493,7 @@ data = {
 {text = 'اوامر القفل', data = msg.sender.user_id..'/NoNextSeting'}, {text = 'اوامر التعطيل', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13522,7 +13522,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13574,7 +13574,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13595,7 +13595,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13616,7 +13616,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13637,7 +13637,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13658,7 +13658,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13679,7 +13679,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -13695,7 +13695,7 @@ data = {
 {text = 'بنك الحظ 🏦', data = msg.sender.user_id..'/bank'}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -17101,7 +17101,6 @@ local CmdStart = '*\n🦇 أهلآ بك في بوت '..(Redis:get(MEZO.."Name:Bo
 '\n🦇 لتفعيل البوت عليك اتباع مايلي ...'..
 '\n🦇 اضف البوت الى مجموعتك'..
 '\n🦇 ارفعه ادمن مشرف'..
-'\n🦇 لتشغيل كيبورد التسليه { /tiger } ارسل كلمة'..
 '\n🦇 ارسل كلمة { تفعيل } ليتم تفعيل الجروب'..
 '\n🦇 مطور البوت ← {@'..UserSudo..'}*'
 local reply_markup = LuaTele.replyMarkup{
@@ -17114,7 +17113,7 @@ data = {
 {text = '- اضف البوت لمجموعتك ♡,', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -17130,7 +17129,7 @@ data = {
 {text = '- اضف البوت لمجموعتك ♡,', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -17219,253 +17218,6 @@ data = {
 return send(msg_chat_id,msg_id,'🦇اهلا بك عزيزي المطور ', 'md', false, false, false, false, reply_markup)
 end
 end
-if text == '/tiger' then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
-data = {
-{
-{text = 'قسـم الحمايـه 🛡',type = 'text'},
-},
-{
-{text = 'ٴ♡━━━━━━ ᴛꞮɢᴇƦ ━━━━━♡ ٴ',type = 'text'},
-},
-{
-{text = 'انمي ولد 👨‍🎤🎑',type = 'text'},{text = 'انمي بنت 👩‍🎤🎑',type = 'text'},
-},
-{
-{text = 'افتار ولد 🙋🏻‍♂🌁',type = 'text'},{text = 'افتار بنت 🙋🏻‍♀🌁',type = 'text'},
-},
-{
-{text = 'رمادي ولد 🧝🏻🏙',type = 'text'},{text = 'رمادي بنت 🧝🏻‍♀🏙', type = 'text'},
-},
-{
-{text = 'تطقيم حب ♥️🎆',type = 'text'},{text = 'بيست بنات 👯‍♀🎆',type = 'text'},
-},
-{
-{text = 'انمي ستوري 🎬',type = 'text'},{text = 'حالات واتس 🎬',type = 'text'},
-},
-{
-{text = 'ٴ♡━━━━━━ ᴛꞮɢᴇƦ ━━━━━♡ ٴ',type = 'text'},
-},
-{
-{text = 'ريمكسات اغـاني 🎵',type = 'text'},{text = 'بصمـات ميمـز 🦹🏻‍♂', type = 'text'},
-},
-{
-{text = 'اشعـار صوتيـة 🎙',type = 'text'},{text = 'اغاني قصيرة 🎶', type = 'text'},
-},
-{
-{text = 'متحـركـات 🎆',type = 'text'},{text = 'صـور 🎇', type = 'text'},
-},
-{
-{text = 'رقيـة شرعيـة 🕋',type = 'text'},
-},
-{
-{text = 'ٴ♡━━━━━━ ᴛꞮɢᴇƦ ━━━━━♡ ٴ',type = 'text'},
-},
-}
-}
-return LuaTele.sendText(msg_chat_id,msg_id,'* ⦁ اهلا بك عزيزي .. تصفح كيبورد خدمات البوت بالاسفل *', 'md', false, false, false, false, reply_markup)
-end
-end
-if text == "اغاني قصيرة 🎶" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,140); 
-local Text ='*🦇┊تم اختيار المقطع الصوتي لك*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "حالات واتس 🎬" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(296,400); 
-local Text ='*🎆┊حـالات واتـس قصيـرة ➧🧸♥️*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVideo?chat_id=' .. msg.chat_id .. '&video=https://t.me/RSHDO5/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "انمي ستوري 🎬" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(6,641); 
-local Text ='*🎆┊ستـوريات آنمـي قصيـرة ➧ 🖤🧧*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVideo?chat_id=' .. msg.chat_id .. '&video=https://t.me/AA_Zll/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "بصمـات ميمـز 🦹🏻‍♂" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-MEZOy = math.random(2,1201); 
-local  U_Y_3_M = '*🦇┊اضغط الـزر لتغييـر مقطـع الميمـز*'
-data = {} 
-data.inline_keyboard = {
-{
-{text = 'ميمـز آخـر 🎙', callback_data= msg.sender.user_id..'/memz'}, 
-},
-}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendVoice?chat_id=" .. msg.chat_id .. "&voice=https://t.me/MemzDavid/"..MEZOy.."&caption=" .. URL.escape( U_Y_3_M).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(data))
-end
-end
-if text == "عـروض الافـلام 🎞" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,82); 
-local Text ='*🦇┊تم اختيار الفلم لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/MEZOMoves/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "انمي بنت 👩‍🎤🎑" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(3,825); 
-local Text ='*🎆┊افتـارات آنمـي بنـات ➧🧚🏻‍♀◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/shhdhn/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "انمي ولد 👨‍??🎑" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(3,556); 
-local Text ='*🎆┊افتـارات آنمـي ولـد ➧🙇🏻◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/dnndxn/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "صـور 🎇" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(4,1171); 
-local Text ='*🦇┊تم اختيار الافتـار لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/PhotosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "معلومات عامة 🧩" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(3,270); 
-local Text ='*🦇┊صـورة ومعلومـة 🛤💡*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/A_l3l/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "افتار بنت 🙋🏻‍♀🌁" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,63); 
-local Text ='*🎆┊افتـارات بنـات تمبلـرࢪ ➧🧚🏻‍♀◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/banaaaat1/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "افتار ولد 🙋🏻‍♂🌁" or text == "رمادي ولد 🧝🏻🏙" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,131); 
-local Text ='*🎆┊افتـارات ولـد ࢪمـاديه ➧🙇🏻🖤◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/shababbbbR/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "رمادي بنت 🧝🏻‍♀🏙" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,131); 
-local Text ='*🎆┊افتـارات بنـات ࢪمـاديه ➧🙇🏻‍♀🖤◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/banatttR/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "بيست بنات 👯‍♀🎆" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,30); 
-local Text ='*🎆┊افتـارات بيست تطقيـم بنـات ➧🧚🏻‍♀🧚🏻‍♀◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/Tatkkkkkim/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "تطقيم حب ♥️🎆" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,58); 
-local Text ='*🎆┊افتـارات تطـقيم حـب تمبلـرࢪ ➧??♥️◟*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/tatkkkkkimh/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "متحـركـات 🎆" then 
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,1075); 
-local Text ='*🦇┊تم اختيار متحركه لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
-end
-end
-if text == "ريمكسات اغـاني 🎵" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(2,612); 
-local Text ='*🦇┊تم اختيار المقطع ريماكس لك 💞🎶*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/RemixDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "رقيـة شرعيـة 🕋" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(5,121); 
-local Text ='*🦇┊تم اختيار مقطـع الرقيـة الشـرعيـة 🕋🤍*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/Rqy_1/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "اشعـار صوتيـة 🎙" then
-Redis:sadd(MEZO..'MEZO:Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-Abs = math.random(7,592); 
-local Text ='*🦇┊تم اختيار المقطع شعر لك*'
-keyboard = {}  
-keyboard.inline_keyboard = {{{text = '🦇 مطـور البـوت 🦇', url = 't.me/'..UserSudo}}} 
-local msg_id = msg.id/2097152/0.5 
-https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "تفعيل البوت بصوره 🦇" then
-  if not msg.ControllerBot then
-  LuaTele.sendText(msg_chat_id,msg_id,'\n*🦇 هذا الامر يخص  '..Controller_Num(2)..' * ',"md",true)  
-  end
-  Redis:set(MEZO.."name bot type : ", "photo")
-  LuaTele.sendText(msg_chat_id,msg_id,'\n*🦇 تم تفعيل رد البوت بصوره * ',"md",true)  
-  end
 if text == "تعطيل البوت بصوره 🦇" then
 if not msg.ControllerBot then
 LuaTele.sendText(msg_chat_id,msg_id,'\n*🦇 هذا الامر يخص  '..Controller_Num(2)..' * ',"md",true)  
@@ -17567,11 +17319,11 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
-return send(msg_chat_id,msg_id,"◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞ » @"..chsource.."","html",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞ » @"..chsource.."","html",true, false, false, true, reply_markup)
 end
 if text == 'حذف كليشه ستارت 🦇' then 
 if not msg.ControllerBot then 
@@ -18214,7 +17966,7 @@ title = "اضغط هنا لمعرفه كيفيه استخدام الترجمه",
 input_message_content = input_message_content,
 reply_markup = {
 inline_keyboard ={
-{{text ="◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞", url= "t.me/"..chsource..""}},
+{{text ="◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞", url= "t.me/"..chsource..""}},
 }
 },
 },
@@ -18233,7 +17985,7 @@ title = br,
 input_message_content = input_message_content,
 reply_markup = {
 inline_keyboard ={
-{{text ="◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞", url= "t.me/"..chsource..""}},
+{{text ="◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞", url= "t.me/"..chsource..""}},
 }
 },
 },
@@ -18252,7 +18004,7 @@ title = br,
 input_message_content = input_message_content,
 reply_markup = {
 inline_keyboard ={
-{{text ="◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞", url= "t.me/"..chsource..""}},
+{{text ="◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞", url= "t.me/"..chsource..""}},
 }
 },
 },
@@ -18636,7 +18388,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18660,7 +18412,7 @@ if Text and Text:match('(%d+)/cancelkit') then
     type = 'inline',
     data = {
     {
-    {text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+    {text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
     },
     }
     }
@@ -18675,7 +18427,7 @@ if Text and Text:match('(%d+)/cancelkit') then
         type = 'inline',
         data = {
         {
-        {text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+        {text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
         },
         }
         }
@@ -18827,7 +18579,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18845,7 +18597,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18894,7 +18646,7 @@ send(Sudo_Id,0,'*\n🦇 تم تفعيل مجموعه جديده \n🦇من قا�
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url="t.me/TGe_R"},
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url="t.me/TGe_R"},
 },
 }
 local txxt = "🦇 تم تفعيل المجموعه و ترقيه {"..y.."} ادمنيه \n⌯︙تم ترقية المالك "
@@ -18915,7 +18667,7 @@ data = {
 {text = 'الغاء كتم', data = IdUser..'unmute'..replyy}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18933,7 +18685,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18956,7 +18708,7 @@ data = {
 {text = 'الغاء حظر', data = IdUser..'unban'..replyy}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18975,7 +18727,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18996,7 +18748,7 @@ data = {
 {text = 'الغاء تقييد', data = IdUser..'unkid'..replyy}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19014,7 +18766,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19116,7 +18868,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19175,7 +18927,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19222,7 +18974,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19239,7 +18991,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19259,7 +19011,7 @@ data = {
 {text = ': رجوع ᥫ᭡', data = IdUser..'/chback'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19279,7 +19031,7 @@ data = {
 {text = ': رجوع ᥫ᭡', data = IdUser..'/chback'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19322,7 +19074,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19375,7 +19127,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19415,7 +19167,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19467,7 +19219,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19494,7 +19246,7 @@ local TextHelp = [[*
 🦇 السمب
 🦇 المتوحدين
 🦇 الكلاب
-🦇 العرر
+?? العرر
 🦇 القرود
 •━═━═━═━𝙏𝘪𝘎𝘦𝘳━═━═━═━•
 🦇 اوامر الترفيه 
@@ -19521,7 +19273,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19562,7 +19314,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19582,7 +19334,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19618,7 +19370,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19677,7 +19429,7 @@ data = {
 {text = 'اوامر القفل', data = IdUser..'/NoNextSeting'}, {text = 'اوامر التعطيل', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '◜ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚔𝚢𝚘𝚐𝚊◞', url = 't.me/'..chsource..''}, 
+{text = '◜𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛◞', url = 't.me/'..chsource..''}, 
 },
 }
 }
