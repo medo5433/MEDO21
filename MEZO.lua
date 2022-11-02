@@ -11592,33 +11592,75 @@ local msg_id = msg.id/2097152/0.5
 end
 end
 ---زخرفة ----
-if text == "زخرفه" or text == "زخرف"  then
-if msg.can_be_deleted_for_all_users == false then
-return LuaTele.sendText(msg_chat_id,msg_id,"\n*⌔ عذرآ البوت ليس ادمن في الجروب يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
+if text == "زخرفه" then
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+    {
+    {text = '𝙀𝙉𝙂 ▴ زخࢪفھـۃ انجليزي', data = msg.sender.user_id..'/zeng'},
+    },
+    {
+      {text = 'AR ▴ زخࢪفھـۃ عربي', data = msg.sender.user_id..'/zar'},
+      },
+    }
+    }
+  return send(msg_chat_id,msg_id, "مرحبا بك في زخرفه بلاك","md",false,false,false,false,reply_markup)
 end
-local reply_markup = LuaTele.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = '🖌️ زخرفه ',  data ='/leftz@'},
-},
-}
-}
-return LuaTele.sendText(msg.chat_id,msg.id,'*\nاليك القوائم الزخرف  اضفط وزخرف*',"md",false, false, false, false, reply_markup)
+-- z eng
+if text and text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zeng" then
+  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
+  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
+  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
+  local zkrf = JSON.decode(api)
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
+      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
+      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
+      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
+      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
+      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
+      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
+      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
+      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
+      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
+      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
+      {{text = zkrf['anubis']['12'] , data = msg.sender.user_id..'/a12'}},
+      {{text = zkrf['anubis']['13'] , data = msg.sender.user_id..'/a13'}},
+      {{text = zkrf['anubis']['14'] , data = msg.sender.user_id..'/a14'}},
+      {{text = zkrf['anubis']['15'] , data = msg.sender.user_id..'/a15'}},
+      {{text = zkrf['anubis']['16'] , data = msg.sender.user_id..'/a16'}},
+      {{text = zkrf['anubis']['17'] , data = msg.sender.user_id..'/a17'}},
+      {{text = zkrf['anubis']['18'] , data = msg.sender.user_id..'/a18'}},
+      {{text = zkrf['anubis']['19'] , data = msg.sender.user_id..'/a19'}},
+    }
+    }
+    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
 end
-
----برج---
-if Redis:get(MEZO.."zhrfa"..msg.sender.user_id) == "sendzh" then
-zh = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(text)..'')
-zx = JSON.decode(zh)
-t = "\n ⌔قائمه الزخرفه \n•━═━═━═━ٰٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼   ═━═━═━•\n"
-i = 0
-for k,v in pairs(zx.ok) do
-i = i + 1
-t = t..i.."- `"..v.."` \n"
-end
-LuaTele.sendText(msg_chat_id,msg_id,t,"md",true) 
-Redis:del(MEZO.."zhrfa"..msg.sender.user_id) 
+-- z ar 
+if text and not text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zar" then
+  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
+  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
+  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
+  local zkrf = JSON.decode(api)
+  local reply_markup = LuaTele.replyMarkup{
+    type = 'inline',
+    data = {
+      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
+      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
+      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
+      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
+      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
+      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
+      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
+      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
+      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
+      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
+      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
+    }
+    }
+    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
 end
 -----معاني-الاسماء---
 if text and text:match("^معني (.*)$") then
@@ -11979,6 +12021,18 @@ send(msg_chat_id,msg_id,'\n*⌔ هذا الامر يخص  '..Controller_Num(7)..
 end
 Redis:del(MEZO.."sayy"..msg_chat_id)
 send(msg_chat_id,msg_id,'\n*⌔ تم تفعيل امر قول * ',"md",true)  
+end
+if text == 'الجروب' or text == 'البار' or text == 'عدد الجروب' or text == 'عدد البار' then
+Get_Chat = bot.getChat(msg.chat_id)
+Info_Chats = bot.getSupergroupFullInfo(msg.chat_id)
+local reply_markup = bot.replyMarkup{
+type = 'inline',
+data = {
+{{text = Get_Chat.title, url = Info_Chats.invite_link.invite_link}},
+}
+}
+bot.sendText(msg.chat_id,msg.id,'\n*𖥔 معلومات الجروب ↑↓\n━━━───⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷───━━━\n𖥔 الايدي -> '..msg.chat_id..' \n𖥔 عدد الاعضاء -> '..Info_Chats.member_count..'\n𖥔 عدد الادمنيه -> '..Info_Chats.administrator_count..'\n𖥔 عدد المطرودين -> '..Info_Chats.banned_count..'\n𖥔 عدد المقيدين -> '..Info_Chats.restricted_count..'\n𖥔 الرابط -> '..Info_Chats.invite_link.invite_link..'*',"md",true, false, false, false, reply_markup)
+return false
 end
 if text == "تعطيل ردود السورس" then
 if not msg.Admin then
