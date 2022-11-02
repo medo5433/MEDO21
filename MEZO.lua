@@ -13413,24 +13413,6 @@ keyboard.inline_keyboard = {
 }
 local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendvideo?chat_id=" .. msg_chat_id .. "&video="..video.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-if Text == '/units' then
-video = "https://t.me/TGe_R/407"
-local Teext =[[
-[⊶⊷᯽ 𝙏𝙞𝙂𝙚𝙍 ᯽⊶⊷](t.me/TGe_R)
-ᥫ᭡ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚝𝚒𝚐𝚎𝚛ᥫ᭡
- ᥫ᭡ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ,ᥫ᭡ 
-ᥫ᭡ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀᥫ᭡  
-[⊶⊷᯽ 𝙏𝙞𝙂𝙚𝙍 ᯽⊶⊷](t.me/TGe_R)
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᥫ᭡ 𝙼𝙴𝙳𝙾 ᥫ᭡',url="t.me/U_Y_3_M"}},
-{{text = 'ᥫ᭡ 𝚈𝚄𝙾𝚂𝚂𝙴𝙵ᥫ᭡',url="t.me/Z0HARY"}},
-{{text = 'ᥫ᭡ 𝙰𝙳𝙾𝙺𝚂 ᥫ᭡',url="t.me/PTPPE"}},
-{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/الاوامر"}},
-}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendvideo?chat_id=" .. msg_chat_id .. "&video="..video.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 elseif text == 'الاوامر' then
 if otlop(msg) == false then
 local chinfo = Redis:get("ch:admin:3am")
