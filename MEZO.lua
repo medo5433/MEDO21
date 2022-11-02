@@ -12023,7 +12023,6 @@ Redis:del(MEZO.."sayy"..msg_chat_id)
 send(msg_chat_id,msg_id,'\n*⌔ تم تفعيل امر قول * ',"md",true)  
 end
 if text == 'الجروب' or text == 'البار' or text == 'عدد الجروب' or text == 'عدد البار' then
-Get_Chat = bot.getChat(msg.chat_id)
 Info_Chats = bot.getSupergroupFullInfo(msg.chat_id)
 local reply_markup = bot.replyMarkup{
 type = 'inline',
@@ -13439,25 +13438,48 @@ end
 -------
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/O_U_C/5330"
+video = "https://t.me/TGe_R/407"
 local T =[[
-•━═━═━═━ٰٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼   ═━═━═━•
-⌔ [ٓ⁨𝗦َ𝗢ٰ𝗨ِِ𝖱ٰ𝗖ٌ𝗘 ٰٰ𝗞ٍ𝗬𝗢ٰ𝗨ِ𝗚ٰٓٓ𝗔˼⁩](t.me/O_U_C)
-⌔ [ٓ𝑮𝑹𝑶𝑼𝑷 𝑻𝑾𝑺](t.me/K_Y_O_G_A)
-⌔ [ٓ𝑅𝓲𝓞](t.me/Y_U_A_R)
-⌔ [ٓٓٓ𝘽ٰ𝘼ِ𝖱ٌِ𝙇𝙊ٰ](t.me/bar_lo0o0)
-⌔ [ٓٓٓ𝙂ٓ8ٰ𝘼ٓ𝙕ٰ𝘼ٰ𝘼ٌِ𝙇](t.me/G8AZAAL)
-•━═━═━═━ٰٰ𝙆ٍ𝙔𝙊ٰ𝙂ٰٓٓ𝘼   ═━═━═━•
- [ٓٓٓ⁨𝗦َ𝗢ٰ𝗨ِِ𝖱ٰ𝗖ٌ𝗘 ٰٰ𝗞ٍ𝗬𝗢ٰ𝗨ِ𝗚ٰٓٓ𝗔˼⁩](t.me/O_U_C)
+[⊶⊷᯽ 𝙏𝙞𝙂𝙚𝙍 ᯽⊶⊷](t.me/TGe_R)
+
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+ [🚨╎𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚝𝚒𝚐𝚎𝚛](t.me/TGe_R)
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+ [⚙╎𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝙴𝙶𝚈𝙿𝚃](t.me/TGe_R)
+ ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+  [⚡╎𝚁𝚄𝙽 𝚈𝙾𝚄𝚁 𝙱𝙾𝚃 𝚆𝙸𝚃𝙷 𝚄𝚂 𝙽𝙾𝚆](t.me/TGe_R)
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+ [◍ 𝚜𝚘𝚞𝚛𝚌𝚎 𝚝𝚒𝚐𝚎𝚛 ◍](t.me/TGe_R)
+ ──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+
+[⊶⊷᯽ 𝙏𝙞𝙂𝙚𝙍 ᯽⊶⊷](t.me/TGe_R)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'أضـف البـوت الـي مجـموعـتـك ✅', url = 't.me/'..UserBot..'?startgroup=new'},
-},
+{{text = '•ᴍʏ ᴅᴇᴠ♪', callback_data="/units"},{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', callback_data="/TGe_R"}},   
+{{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
+{{text = '♪ ✈ • أضف البوت لمجموعتك • ✈ •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/swry00/35&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if Text == '/units' then
+local Teext =[[
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚝𝚒𝚐𝚎𝚛
+ ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
+ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𖣐 𝙼𝙴𝙳𝙾 𖣐',url="t.me/U_Y_3_M"}},
+{{text = '𖣐 𝚈𝚄𝙾𝚂𝚂𝙴𝙵𖣐',url="t.me/Z0HARY"}},
+{{text = '𖣐 𝙰𝙳𝙾𝙺𝚂 𖣐',url="t.me/UU_TEI"}},
+{{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/الاوامر"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
+end
 elseif text == 'الاوامر' then
 if otlop(msg) == false then
 local chinfo = Redis:get("ch:admin:3am")
