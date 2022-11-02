@@ -13479,7 +13479,6 @@ keyboard.inline_keyboard = {
 {{text = '◉𝙱𝙰𝙲𝙺↵', callback_data="/الاوامر"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
-end
 elseif text == 'الاوامر' then
 if otlop(msg) == false then
 local chinfo = Redis:get("ch:admin:3am")
