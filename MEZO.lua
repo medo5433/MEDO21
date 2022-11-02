@@ -11591,76 +11591,7 @@ local msg_id = msg.id/2097152/0.5
 end
 end
 ---زخرفة ----
-if text == "زخرفه" then
-  local reply_markup = LuaTele.replyMarkup{
-    type = 'inline',
-    data = {
-    {
-    {text = '𝙀𝙉𝙂 ▴ زخࢪفھـۃ انجليزي', data = msg.sender.user_id..'/zeng'},
-    },
-    {
-      {text = 'AR ▴ زخࢪفھـۃ عربي', data = msg.sender.user_id..'/zar'},
-      },
-    }
-    }
-  return send(msg_chat_id,msg_id, "مرحبا بك في زخرفه بلاك","md",false,false,false,false,reply_markup)
-end
--- z eng
-if text and text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zeng" then
-  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
-  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
-  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
-  local zkrf = JSON.decode(api)
-  local reply_markup = LuaTele.replyMarkup{
-    type = 'inline',
-    data = {
-      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
-      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
-      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
-      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
-      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
-      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
-      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
-      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
-      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
-      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
-      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
-      {{text = zkrf['anubis']['12'] , data = msg.sender.user_id..'/a12'}},
-      {{text = zkrf['anubis']['13'] , data = msg.sender.user_id..'/a13'}},
-      {{text = zkrf['anubis']['14'] , data = msg.sender.user_id..'/a14'}},
-      {{text = zkrf['anubis']['15'] , data = msg.sender.user_id..'/a15'}},
-      {{text = zkrf['anubis']['16'] , data = msg.sender.user_id..'/a16'}},
-      {{text = zkrf['anubis']['17'] , data = msg.sender.user_id..'/a17'}},
-      {{text = zkrf['anubis']['18'] , data = msg.sender.user_id..'/a18'}},
-      {{text = zkrf['anubis']['19'] , data = msg.sender.user_id..'/a19'}},
-    }
-    }
-    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
-end
--- z ar 
-if text and not text:match("%a") and Redis:get(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:") == "zar" then
-  Redis:del(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:")
-  Redis:set(MEZO..msg_chat_id..msg.sender.user_id.."zkrf:text", text)
-  local api = https.request("https://api-jack.ml/api19.php?text="..URL.escape(text))
-  local zkrf = JSON.decode(api)
-  local reply_markup = LuaTele.replyMarkup{
-    type = 'inline',
-    data = {
-      {{text = zkrf['anubis']['1'] , data = msg.sender.user_id..'/a1'}},
-      {{text = zkrf['anubis']['2'] , data = msg.sender.user_id..'/a2'}},
-      {{text = zkrf['anubis']['3'] , data = msg.sender.user_id..'/a3'}},
-      {{text = zkrf['anubis']['4'] , data = msg.sender.user_id..'/a4'}},
-      {{text = zkrf['anubis']['5'] , data = msg.sender.user_id..'/a5'}},
-      {{text = zkrf['anubis']['6'] , data = msg.sender.user_id..'/a6'}},
-      {{text = zkrf['anubis']['7'] , data = msg.sender.user_id..'/a7'}},
-      {{text = zkrf['anubis']['8'] , data = msg.sender.user_id..'/a8'}},
-      {{text = zkrf['anubis']['9'] , data = msg.sender.user_id..'/a9'}},
-      {{text = zkrf['anubis']['10'] , data = msg.sender.user_id..'/a10'}},
-      {{text = zkrf['anubis']['11'] , data = msg.sender.user_id..'/a11'}},
-    }
-    }
-    return send(msg_chat_id,msg_id, "★ اختࢪ الزخࢪفھـۃ التي تࢪيدها\n ▽","html",false,false,false,false,reply_markup)
-end
+
 -----معاني-الاسماء---
 if text and text:match("^معني (.*)$") then
 local TextName = text:match("^معني (.*)$")
@@ -20094,7 +20025,7 @@ local UserId = Text:match('(%d+)/mute_Id')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:set(MEZO.."Status:Id"..ChatId,true) 
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '- رجوع', data =UserId..'/'.. 'listallAddorrem'},},}}
-edit(ChatId,Msg_id,Reply_Status(IdUser,"🦇 تم تفعيل امر الايدي").unLock, 'md', true, false, reply_markup)
+edit(ChatId,Msg_id,Reply_Status(IdUser,"?? تم تفعيل امر الايدي").unLock, 'md', true, false, reply_markup)
 end
 elseif Text and Text:match('(%d+)/mute_IdPhoto') then
 local UserId = Text:match('(%d+)/mute_IdPhoto')
@@ -21333,5 +21264,3 @@ end
 Redis:sadd(MEZO.."eza3a",Token.."&"..MEZO)
 Redis:set("@"..UserBot,MEZO.."&".."@"..UserBot.."$@"..UserSudo.."+"..Token)
 luatele.run(CallBackLua)
- end 
- end
